@@ -281,7 +281,7 @@ nav {
     margin-top: 8.5%;
 }
 .my-sprite {
-    left: 20%;
+    left: 16%;
     position: absolute;
     top: 23%;
 }
@@ -291,22 +291,22 @@ nav {
 
 /* start: animations */
 .animate {
-  background-image: url(../img/emerge-space-animation-sprite-GMP-opt.png);
-  width: 430px;
-  height: 380px;
-  background-position: 0, 0;
-  animation:play 4s infinite steps(43);
-  -webkit-animation:play 4s infinite steps(43);
+  animation: 4s steps(43, end) 0s normal none infinite play;
+  background-image: url("http://emergespacesite.magnolia.thelatenightsalon.co.uk/img/emerge-space-animation-sprite-GMP-opt.png");
+  background-repeat: repeat-x;
+  background-size: 4300% auto;
+  height: 400px;
+  width: 60%;
 }
 
 @keyframes play {
-   from { background-position:    0px; }
-     to { background-position: -18490px; }
+   from { background-position:    0% }
+     to { background-position: 4300%; }
 }
 
 @-webkit-keyframes play {
-   from { background-position:    0px; }
-     to { background-position: -18490px; }
+   from { background-position:    0%; }
+     to { background-position: -4300%; }
 }
 
 
