@@ -393,12 +393,16 @@ nav a:hover {
     position: relative;
     right: 2px;
 }
+.mobile-only {
+    display: none;
+}
 
 
 /* start: animations */
 .animate {
   animation: 4s steps(43, end) 0s normal none infinite play;
-  background-image: url("http://emergespacesite.magnolia.thelatenightsalon.co.uk/img/emerge-space-animation-sprite-NEW.png");
+  -webkit-animation: 4s steps(43, end) 0s normal none infinite play;
+  background-image: url("../img/emerge-space-animation-sprite-NEW.png");
   background-repeat: repeat-x;
   background-size: 4300% auto;
   height: auto;
@@ -450,6 +454,41 @@ nav a:hover {
     }               
 }
 
+.balance {
+    animation-name: balance;
+    -webkit-animation-name: balance;    
+
+    animation-duration: 0.8s;   
+    -webkit-animation-duration: 0.8s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes balance {
+    0% {
+        transform: rotate(0deg);   
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);   
+    }                       
+}
+
+@-webkit-keyframes balance {
+    0% {
+        -webkit-transform: rotate(0deg);   
+    }
+    50% {
+        -webkit-transform: rotate(4deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);   
+    }                       
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -461,6 +500,91 @@ nav a:hover {
 @media only screen and (max-width: 860px) {
     #logo-text {
         left: -500px;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+    nav {
+        position: absolute;
+        width: 100%;
+    }
+    .container {
+       overflow-y: auto;
+       overflow-x:hidden;
+    }
+    .mobile-top-logo {
+        background: url("../img/bg-menu-mobile.png") repeat-x 0 -15px transparent;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+    }
+    .mobile-top-logo img {
+        width: 90%;
+        height: auto;
+        padding: 8px 0;
+    }
+    .columns {
+        width: 100%;
+        float: right;
+    }
+    .column-b {
+        margin-top: 125px;
+    }
+    .get-face-space {
+      float: right;
+      height: 100%;
+      margin-top: 50px;
+      width: 80%;
+      margin: 0 10%;
+    }
+    .dont-miss-out p {
+        font-size: 1em !important;
+    }
+    .astronaut {
+      height: auto;
+      width: 100%;
+      position: relative;
+    }
+    .flash-container {
+      right: -125%;
+      top: 15px;
+      width: 265%;
+    }
+    .my-sprite {
+      background: url("../img/guy.png") no-repeat scroll 0 0 / 54% auto rgba(0, 0, 0, 0);
+      width: 130%;
+    }
+    .astronaut .image-container img {
+      left: -25%;
+      width: 135%;
+    }
+    .enter-now {
+      left: 30px;
+      position: relative;
+      text-align: right;
+      top: -70px;
+    }
+    .enter-now img {
+        width: 90%;
+    }
+    .right-corner {
+        background: none;
+    }
+    .row-countdown {
+        margin-top: 50px;
+        font-size: 12px;
+        left: -20px;
+    }
+    .row-countdown table, .row-countdown p {
+        width: auto;
+        margin: 0;
+        left: 0;
     }
 }
 
