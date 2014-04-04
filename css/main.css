@@ -404,13 +404,14 @@ nav a:hover {
 
 /* start: animations */
 .animate {
-  animation: 4s steps(43, end) 0s normal none infinite play;
-  -webkit-animation: 4s steps(43, end) 0s normal none infinite play;
+    animation: play 4s infinite steps(43);
+    -webkit-animation: play 4s infinite steps(43);
   background-image: url("../img/emerge-space-animation-sprite-NEW.png");
   background-repeat: repeat-x;
   background-size: 4300% auto;
   height: auto;
   width: 60%;
+
 }
 
 @keyframes play {
@@ -535,7 +536,7 @@ nav a:hover {
     .mobile-top-logo img {
         width: 90%;
         height: auto;
-        padding: 8px 0;
+        padding: 8px 0 4px 0;
     }
     .columns {
         width: 100%;
@@ -565,8 +566,12 @@ nav a:hover {
       width: 265%;
     }
     .my-sprite {
-      background: url("../img/guy.png") no-repeat scroll 0 0 / 54% auto rgba(0, 0, 0, 0);
       width: 130%;
+      background-image: url("../img/guy.png");
+      background-size: 54%;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-color: transparent;
     }
     .astronaut .image-container img {
       left: -25%;
