@@ -72,6 +72,9 @@ textarea {
 .layer-6 {  z-index: 6; }
 .layer-7 {  z-index: 7; }
 .layer-8 {  z-index: 8; }
+.txt-shadow-a {
+   text-shadow: 2px 2px 4px #000000, -2px -2px 4px #000000;
+}
 a {
    outline: 0;
 }
@@ -110,7 +113,7 @@ nav {
     top: 0;
 }
 .left-corner {
-    background: url("../img/logo.png") no-repeat scroll 0 0 transparent;
+    background: url("../img/bg-logo.png") no-repeat scroll 0 0 transparent;
     height: 80px;
     left: 0;
     width: 200px;
@@ -242,6 +245,14 @@ nav {
 .cans .blue-can img {
     width: 100%;
 }
+.red-can {
+    animation-duration: 3.2s !important;   
+    -webkit-animation-duration: 3.2s !important;
+}
+.blue-can {
+    animation-duration: 3s !important;   
+    -webkit-animation-duration: 3s !important;
+}
 .max-width-a {
     max-width: 700px;
 }
@@ -288,11 +299,65 @@ nav {
 .max-width-b {
     max-width: 650px;
 }
+.min-width-a {
+    min-width: 500px;  
+}
+.row-countdown {
+    color: #FFFFFF;
+    margin-top: 72px;
+    position: relative;
+    text-align: center;
+    width: auto;
+    font-size: 10px;
+}
+.row-countdown p {
+    margin: 0;
+    text-align: right;
+    line-height: 1em;
+}
+.row-countdown thead td, 
+.row-countdown p {
+  color: #EA342F;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+.row-countdown tbody td {
+  color: #FFFFFF;
+}
+.row-countdown tbody td span {
+  font-weight: bold;
+}
+.row-countdown .time {
+  display: inline-block;
+  font-size: 4em;
+  height: auto;
+  line-height: 1.2em;
+}
+.row-countdown .dots {
+  font-size: 4em;
+  position: relative;
+  text-shadow: -3px -3px 10px #AAAAFF, 1px 3px 5px #11AAFF;
+  top: -1px;
+}
+.row-countdown table,
+.row-countdown p {
+    width: 95%;
+    margin-right: 5%;
+}
+.row-countdown thead td {
+    line-height: 1em;
+}
+.row-countdown tbody td {}
+.until-launch {
+    position: relative;
+    right: 2px;
+}
+
 
 /* start: animations */
 .animate {
   animation: 4s steps(43, end) 0s normal none infinite play;
-  background-image: url("http://emergespacesite.magnolia.thelatenightsalon.co.uk/img/emerge-space-animation-sprite-GMP-opt.png");
+  background-image: url("http://emergespacesite.magnolia.thelatenightsalon.co.uk/img/emerge-space-animation-sprite-NEW.png");
   background-repeat: repeat-x;
   background-size: 4300% auto;
   height: 400px;
@@ -309,6 +374,40 @@ nav {
      to { background-position: -4300%; }
 }
 
+.tossing {
+    animation-name: tossing;
+    -webkit-animation-name: tossing;    
+
+    animation-duration: 2.5s;   
+    -webkit-animation-duration: 2.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+    0% {
+        transform: rotate(0deg) translate(0px, 0px);   
+    }
+    50% {
+        transform: rotate(5deg) translate(-20px, -40px);
+    }
+    100% {
+        transform: rotate(0deg) translate(0px, 0px);   
+    }                       
+}
+
+@-webkit-keyframes tossing {
+    0% {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);  
+    }
+    50% {
+        -webkit-transform: rotate(5deg) translate(-20px, -40px);
+    }
+    100% {
+        -webkit-transform: rotate(0deg) translate(0px, 0px);
+    }               
+}
 
 /* ==========================================================================
    Media Queries
