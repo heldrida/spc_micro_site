@@ -10,6 +10,13 @@ $(document).ready(function(){
 	var timeout = 1000;
 	var updateFontSize = function(){
  
+		if ( window.innerWidth <= 580 ) {
+			
+			$(".dont-miss-out").css("font-size", "");
+
+			return;
+		};
+
 		font = $('.dont-miss-out').width() / maxSz;
 		font = (font * 10) / 10;
 
@@ -19,7 +26,7 @@ $(document).ready(function(){
 
 	$(window).on('resize', _.throttle(updateFontSize, 400));
 	updateFontSize();
-	
+
 	/***
 	 *
 	 * Set clock
