@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-	var mySettings = {
-		wp_base_path: window.location.hostname.indexOf('tlnscompetitions') > -1 ? '/emerge_space/wordpress' : 'http://emergespace.magnolia.thelatenightsalon.co.uk/wordpress'
-	};
-
 	/***
 	 *
 	 * Update some fonts on window resize
@@ -22,7 +18,8 @@ $(document).ready(function(){
 	};
 
 	$(window).on('resize', _.throttle(updateFontSize, 400));
-
+	updateFontSize();
+	
 	/***
 	 *
 	 * Set clock
@@ -72,21 +69,10 @@ $(document).ready(function(){
 
 	};
 
-	$.post(
-		mySettings.wp_base_path + '/wp-admin/admin-ajax.php?action=space_competition',
-		{
-			option: "my_options",
-			get_option_name: "my_competition_options" 
-		},
-		function( data ){
+	var myDate = "31/05/2014";
+	var x = myDate.split("/");
+	var myDate = x[2] + "-" + x[1] + "-" + x[0];
 
-			data = JSON.parse(data);
-
-			var x = data.end_date.split("/");
-			var myDate = x[2] + "-" + x[1] + "-" + x[0];
-
-			initClock( myDate );
-
-	});
+	initClock( myDate );
 
 });
