@@ -566,12 +566,10 @@ nav a:hover {
       width: 265%;
     }
     .my-sprite {
-      width: 130%;
-      background-image: url("../img/guy.png");
-      background-size: 54%;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-color: transparent;
+        left: 17%;
+        position: absolute;
+        top: -4%;
+        width: 90%;
     }
     .astronaut .image-container img {
       left: -25%;
