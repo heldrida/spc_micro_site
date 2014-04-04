@@ -129,8 +129,7 @@ nav a:hover {
     top: 0;
 }
 .left-corner {
-    background: url("../img/bg-logo.png") no-repeat scroll 0 0 transparent;
-    height: 80px;
+    height: 80px;   
     left: 0;
     width: 200px;
 }
@@ -145,12 +144,23 @@ nav a:hover {
     top: 0;
 }
 #logo {
-    left: 0;
-    z-index: 2;
+  background: url("../img/bg-logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  height: 85px;
+  left: 0;
+  width: 231px;
+  z-index: 2;
 }
 #logo-text {
     left: 100px;
     z-index: 1;
+    width: 500px;
+    height: auto;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+#logo-text img {
+    width: 100%;
+    height: auto;
 }
 .icons-social-network {
   left: 0;
@@ -319,7 +329,7 @@ nav a:hover {
 .my-sprite {
     left: 16%;
     position: absolute;
-    top: 23%;
+    top: 10%;
 }
 .max-width-b {
     max-width: 650px;
@@ -391,7 +401,7 @@ nav a:hover {
   background-image: url("http://emergespacesite.magnolia.thelatenightsalon.co.uk/img/emerge-space-animation-sprite-NEW.png");
   background-repeat: repeat-x;
   background-size: 4300% auto;
-  height: 400px;
+  height: auto;
   width: 60%;
 }
 
@@ -446,6 +456,12 @@ nav a:hover {
 
 @media only screen and (min-width: 35em) {
 
+}
+
+@media only screen and (max-width: 860px) {
+    #logo-text {
+        left: -500px;
+    }
 }
 
 @media print,
