@@ -85,7 +85,11 @@ html, body {
     height: 100%;
 }
 body {
-    background: url("../img/background.png") repeat scroll 0 0 / cover  black;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: transparent;
 }
 .red-flash {
     background: url("../img/red-flash.png") no-repeat scroll 0 0 / cover transparent;
@@ -514,6 +518,10 @@ nav a:hover {
         position: absolute;
         width: 100%;
     }
+    html, body {
+        width: auto;
+        height: auto;
+    }
     .container {
        overflow-y: auto;
        overflow-x:hidden;
@@ -534,7 +542,7 @@ nav a:hover {
         float: right;
     }
     .column-b {
-        margin-top: 125px;
+        margin-top: 135px;
     }
     .get-face-space {
       float: right;
@@ -575,16 +583,21 @@ nav a:hover {
     }
     .right-corner {
         background: none;
+        width: 176px;
+        margin-right: 10px;
     }
     .row-countdown {
         margin-top: 50px;
-        font-size: 12px;
-        left: -20px;
+        font-size: 10px;
+        left: auto;
     }
     .row-countdown table, .row-countdown p {
-        width: auto;
+        width: 100%;
         margin: 0;
         left: 0;
+    }
+    .until-launch {
+        right: auto;
     }
 }
 

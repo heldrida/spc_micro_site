@@ -35,8 +35,8 @@ $(document).ready(function(){
 	function initClock(myDate){
 
 	    // set the date we're counting down to
-	    var target_date = new Date(myDate).getTime();
-	     
+	    var target_date = new Date("myDate").getTime();
+
 	    // variables for time units
 	    var days, hours, minutes, seconds;
 	     
