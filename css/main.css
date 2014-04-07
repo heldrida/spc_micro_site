@@ -622,6 +622,14 @@ nav a:hover {
       width: 100%;
       position: relative;
     }
+    /* s: android browser fix */
+    .android .astronaut {
+        display: block;
+    }
+    .android .astronaut .helmet { 
+        display: inline-block;
+    }
+    /* e: android browser fix */
     .flash-container {
       right: -125%;
       top: 15px;
