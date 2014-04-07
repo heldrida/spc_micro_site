@@ -5,10 +5,16 @@ $(document).ready(function(){
 	 * Detect mobile or table
 	 *
 	 */
-	if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)){
+	if (navigator.userAgent.match(/BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)){
+		
 		$("html").addClass("mobile-tablet");
 		$(".helmet").find(".my-sprite").removeClass("animate");
 		$(".astronaut .my-sprite").addClass("balance");
+	
+	} else if (navigator.userAgent.match(/Android/i)) {
+
+		$("html").addClass("android");
+
 	};
 
 
