@@ -77,6 +77,9 @@ textarea {
 .txt-shadow-a {
    text-shadow: 2px 2px 4px #000000, -2px -2px 4px #000000;
 }
+.text-shadow-soft {
+  text-shadow: 2px 2px 2px #000000, -2px -2px 2px #000000;
+}
 a {
    outline: 0;
 }
@@ -398,6 +401,23 @@ nav a:hover {
     position: relative;
     right: 2px;
 }
+.ie-guy-image {
+    display: none;    
+}
+.no-cssanimations .ie-guy-image {
+    display: block;
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+.no-cssanimations .anime {
+    display: none;
+}
+.no-cssanimations .my-sprite {
+    visibility: hidden;
+}
 .mobile-only {
     display: none;
 }
@@ -419,7 +439,7 @@ nav a:hover {
 .mobile-footer {
     background: url("../img/bg-footer-mobile.png") repeat-x 0 -21px transparent;
     width: 100%;
-    height: 40px;
+    height: 50px;
     clear: both;
     position: relative;
     overflow: hidden;
