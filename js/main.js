@@ -107,7 +107,7 @@ $(document).ready(function(){
 			return;
 		};
 
-		if (window.innerHeight < 750) {
+		if (window.innerHeight < 798) {
 
 			$('.image-container').css("margin-top", "15%");
 			$('html').css('font-size', '0.9');
