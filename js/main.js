@@ -100,4 +100,29 @@ $(document).ready(function(){
 
 	initClock( myDate );
 
+	// window height fix
+	var heightFix = function(){
+		
+		if (window.innerWidth < 580){
+			return;
+		};
+
+		if (window.innerHeight < 750) {
+
+			$('.image-container').css("margin-top", "15%");
+			$('html').css('font-size', '0.9');
+			$('.enter-now img').css({ width: "50%", top: "-20px" });
+
+		} else {
+
+			$('.image-container').css("margin-top", "");
+			$('html').css('font-size', '');
+			$('.enter-now img').css("width", "").css("top", "");
+
+		};
+
+	};
+
+	$(window).on('resize', _.throttle(heightFix, 800) ).trigger("resize");
+
 });
