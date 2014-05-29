@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 	};
 
-	var myDate = "31/05/2014";
+	var myDate = "31/07/2014";
 	var x = myDate.split("/");
 	var myDate = x[2] + "/" + x[1] + "/" + x[0];
 
