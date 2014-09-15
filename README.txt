@@ -1,5 +1,5 @@
 
-	> Emerge Space Animation proto
+	> Animation proto
 
 		http://jsbin.com/muyeguba/9/
 
